@@ -10,7 +10,7 @@ ALTER TABLE airbnb_sevilla DROP column license;
 ALTER TABLE airbnb_sevilla DROP column host_name;
 
 # Comprobamos que no existan valores nulos o valores en blanco en la tabla
-SELECT *FROM airbnb_sevilla WHERE price IS NULL AND TRIM(price)<>'';
+SELECT * FROM airbnb_sevilla WHERE price IS NULL AND TRIM(price)<>'';
 
 #Realizamos una agrupación por precio medio y neighbourhood_group de forma descendente 
 SELECT DISTINCT neighbourhood_group, AVG (price) AS avg_precio 
